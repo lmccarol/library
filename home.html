@@ -1,0 +1,81 @@
+<!--420-P12-ID Integration Project 2 - Web Programming
+Author: Carol Ferguson
+Student No: 650326070
+Date October 5, 2023
+-->
+
+<!--Home page-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <title>Port-Cartier Municipal Library</title>
+</head>
+
+<body>
+    <div class="container-lg">
+        <div class="row justify-content-center align-items-center">
+            <div class="col md-5 text-center text-md-start">
+                <h1 class="fst-italic text-primary m-4 p-2">Port-Cartier Municipal Library</h1>
+                <p class="lead my-2 text-primary">Welcome to the library. <br>You are not logged in. Please login to
+                    your account.</p>
+
+                <form action="login.php" method="post">
+                    <div class="container">
+                        <br>
+                        <label for="code"><b>Member or Employee Code: </b></label><br>
+                        <input type="text" placeholder="Enter Code" name="code" required><br><br>
+                        <label for="psw"><b>Password: </b></label><br>
+                        <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+                        
+                        <p><b>Choose Member, Employee or Admin: </b></p>
+
+                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                            <input type="radio" class="btn-check" name="btnradio" id="member" value="member"
+                                autocomplete="off" checked>
+                            <label class="btn btn-outline-primary" for="member">Member</label>
+
+                            <input type="radio" class="btn-check" name="btnradio" id="employee" value="employee"
+                                autocomplete="off">
+                            <label class="btn btn-outline-primary" for="employee">Employee</label>
+
+                            <input type="radio" class="btn-check" name="btnradio" id="admin" value="admin"
+                                autocomplete="off">
+                            <label class="btn btn-outline-primary" for="admin">Admin</label>
+                        </div>
+                        <div>
+                            <!-- add link to login -->
+                            <br><br>
+                            <button type="submit" class="btn btn-secondary btn-lg"
+                                value="Get Selected values">Login</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col md-5 text-center d-none d-md-block">
+                <!--tooltip tt-->
+                <span class="tt" data-bs-placement="bottom" title="library image">
+                    <img class="img-fluid" src="assets/library.jpg" alt="library">
+                </span>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script>
+        const tooltips = document.querySelectorAll('.tt')
+        tooltips.forEach(t => {
+            new bootstrap.Tooltip(t)
+        })
+    </script>
+
+</body>
+
+</html>
